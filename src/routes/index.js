@@ -7,7 +7,9 @@ const express_1 = require("express");
 // Routes of the application
 const drivers_routes_1 = __importDefault(require("@routes/drivers/drivers.routes"));
 const vehicles_routes_1 = __importDefault(require("@routes/vehicles/vehicles.routes"));
+const route_routes_1 = __importDefault(require("@routes/route/route.routes"));
 const router = (0, express_1.Router)();
 router.use('/drivers', drivers_routes_1.default);
 router.use('/vehicles', vehicles_routes_1.default);
+router.use('/routes', route_routes_1.default);
 exports.default = router;

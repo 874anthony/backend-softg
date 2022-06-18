@@ -1,5 +1,3 @@
-import { Request, Response, NextFunction } from 'express';
-
 // Model
 import Vehicle from '@models/vehicles/vehicles.model';
 

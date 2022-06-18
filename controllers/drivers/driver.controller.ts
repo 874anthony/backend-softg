@@ -1,5 +1,3 @@
-import { Request, Response, NextFunction } from 'express';
-
 // Model
 import Driver from '@models/drivers/drivers.model';
 
