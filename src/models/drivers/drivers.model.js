@@ -43,6 +43,10 @@ const DriverSchema = new mongoose_1.Schema({
         required: true,
         min: 5,
     },
+    active: {
+        type: Boolean,
+        default: true,
+    },
     createdAt: {
         type: Date,
         default: Date.now(),

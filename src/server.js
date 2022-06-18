@@ -16,7 +16,7 @@ mongoose_1.default
     .connect(DB, { dbName: 'softg_db-main' })
     .then(() => console.log('🎈 DB connected sucessfully!'))
     .catch(console.log);
-const PORT = process.env.PORT || 3000;
+const PORT = Number(process.env.PORT) || 3000;
 app_1.default.listen(PORT, () => {
     console.log(`🎈 Server inizialited, app is running on ${PORT}`);
 });

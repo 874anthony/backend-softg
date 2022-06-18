@@ -8,6 +8,12 @@
     "dev": "tsc -w",
     "serve": "cross-env NODE_ENV=development npx nodemon ./src/server.js"
   },
+  "_moduleAliases": {
+    "@models": "src/models",
+    "@controllers": "src/controllers",
+    "@utils": "src/utils",
+    "@routes": "src/routes"
+  },
   "keywords": [
     "Soft-G",
     "back-end",
@@ -18,6 +24,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.1",
+    "module-alias": "^2.2.2",
     "mongoose": "^6.4.0",
     "morgan": "^1.10.0"
   },

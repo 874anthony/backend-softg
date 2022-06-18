@@ -43,6 +43,10 @@ const DriverSchema: Schema<IDriver> = new Schema({
     required: true,
     min: 5,
   },
+  active: {
+    type: Boolean,
+    default: true,
+  },
   createdAt: {
     type: Date,
     default: Date.now(),
