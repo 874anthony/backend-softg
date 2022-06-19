@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.populateRouteOptions = void 0;
 const mongoose_1 = require("mongoose");
 const RouteSchema = new mongoose_1.Schema({
     description: {
@@ -26,4 +27,9 @@ const RouteSchema = new mongoose_1.Schema({
         default: Date.now(),
     },
 });
+// For populating fields
+exports.populateRouteOptions = [
+    { path: 'driverId', select: 'firstName' },
+    { path: 'vehicleId', select: 'description year' },
+];
 exports.default = (0, mongoose_1.model)('route', RouteSchema);

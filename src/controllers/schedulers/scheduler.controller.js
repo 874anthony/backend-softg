@@ -19,19 +19,19 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.deleteRoute = exports.updateRoute = exports.getRoute = exports.createRoute = exports.getAllRoutes = void 0;
+exports.deleteScheduler = exports.updateScheduler = exports.getScheduler = exports.createScheduler = exports.getAllSchedulers = void 0;
 // Model
-const routes_model_1 = __importStar(require("@models/routes/routes.model"));
+const scheduler_model_1 = __importStar(require("@models/schedulers/scheduler.model"));
 // General controller
 const factory = __importStar(require("@controllers/factory.controller"));
-const getAllRoutes = factory.findAll(routes_model_1.default);
-exports.getAllRoutes = getAllRoutes;
-const createRoute = factory.createOne(routes_model_1.default);
-exports.createRoute = createRoute;
+const getAllSchedulers = factory.findAll(scheduler_model_1.default);
+exports.getAllSchedulers = getAllSchedulers;
+const createScheduler = factory.createOne(scheduler_model_1.default);
+exports.createScheduler = createScheduler;
 // Routes that requires id on the params
-const getRoute = factory.findOne(routes_model_1.default, routes_model_1.populateRouteOptions);
-exports.getRoute = getRoute;
-const updateRoute = factory.updateOne(routes_model_1.default);
-exports.updateRoute = updateRoute;
-const deleteRoute = factory.deleteOne(routes_model_1.default);
-exports.deleteRoute = deleteRoute;
+const getScheduler = factory.findOne(scheduler_model_1.default, scheduler_model_1.populateSchedulerOpts);
+exports.getScheduler = getScheduler;
+const updateScheduler = factory.updateOne(scheduler_model_1.default);
+exports.updateScheduler = updateScheduler;
+const deleteScheduler = factory.deleteOne(scheduler_model_1.default);
+exports.deleteScheduler = deleteScheduler;

@@ -19,19 +19,15 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.deleteRoute = exports.updateRoute = exports.getRoute = exports.createRoute = exports.getAllRoutes = void 0;
-// Model
-const routes_model_1 = __importStar(require("@models/routes/routes.model"));
-// General controller
-const factory = __importStar(require("@controllers/factory.controller"));
-const getAllRoutes = factory.findAll(routes_model_1.default);
-exports.getAllRoutes = getAllRoutes;
-const createRoute = factory.createOne(routes_model_1.default);
-exports.createRoute = createRoute;
-// Routes that requires id on the params
-const getRoute = factory.findOne(routes_model_1.default, routes_model_1.populateRouteOptions);
-exports.getRoute = getRoute;
-const updateRoute = factory.updateOne(routes_model_1.default);
-exports.updateRoute = updateRoute;
-const deleteRoute = factory.deleteOne(routes_model_1.default);
-exports.deleteRoute = deleteRoute;
+const express_1 = require("express");
+// Controller
+const SchedulerController = __importStar(require("@controllers/schedulers/scheduler.controller"));
+const router = (0, express_1.Router)();
+router.route('/').get(SchedulerController.getAllSchedulers).post(SchedulerController.createScheduler);
+// Routes with the id
+router
+    .route('/:id')
+    .get(SchedulerController.getScheduler)
+    .put(SchedulerController.updateScheduler)
+    .delete(SchedulerController.deleteScheduler);
+exports.default = router;

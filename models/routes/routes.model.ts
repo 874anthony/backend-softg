@@ -1,4 +1,4 @@
-import { Schema, model } from 'mongoose';
+import { Schema, model, PopulateOptions } from 'mongoose';
 
 import { IRoute } from './types';
 
@@ -27,5 +27,11 @@ const RouteSchema: Schema<IRoute> = new Schema({
     default: Date.now(),
   },
 });
+
+// For populating fields
+export const populateRouteOptions: PopulateOptions[] = [
+  { path: 'driverId', select: 'firstName' },
+  { path: 'vehicleId', select: 'description year' },
+];
 
 export default model<IRoute>('route', RouteSchema);
