@@ -8,6 +8,12 @@
     "dev": "tsc -w",
     "serve": "cross-env NODE_ENV=development npx nodemon ./src/server.js"
   },
+  "_moduleAliases": {
+    "@models": "src/models",
+    "@controllers": "src/controllers",
+    "@utils": "src/utils",
+    "@routes": "src/routes"
+  },
   "keywords": [
     "Soft-G",
     "back-end",
@@ -17,14 +23,21 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
     "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "module-alias": "^2.2.2",
     "mongoose": "^6.4.0",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.12",
+    "@types/crypto-js": "^4.1.1",
     "@types/express": "^4.17.13",
+    "@types/jsonwebtoken": "^8.5.8",
     "@types/morgan": "^1.9.3",
+    "@types/validator": "^13.7.3",
     "cross-env": "^7.0.3",
     "dotenv": "^16.0.1",
     "nodemon": "^2.0.16"
