@@ -30,6 +30,6 @@ const RouteSchema = new mongoose_1.Schema({
 // For populating fields
 exports.populateRouteOptions = [
     { path: 'driverId', select: 'firstName' },
-    { path: 'vehicleId', select: 'description year' },
+    { path: 'vehicleId', select: 'description year make' },
 ];
 exports.default = (0, mongoose_1.model)('route', RouteSchema);

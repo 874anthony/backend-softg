@@ -31,7 +31,7 @@ const RouteSchema: Schema<IRoute> = new Schema({
 // For populating fields
 export const populateRouteOptions: PopulateOptions[] = [
   { path: 'driverId', select: 'firstName' },
-  { path: 'vehicleId', select: 'description year' },
+  { path: 'vehicleId', select: 'description year make' },
 ];
 
 export default model<IRoute>('route', RouteSchema);
